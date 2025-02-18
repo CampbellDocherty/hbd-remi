@@ -1,11 +1,11 @@
 import { Head } from './components/Head';
-import { CopySection } from './components/CopySection';
+import { CopySections } from './components/CopySection';
 
 const App = () => {
   return (
     <>
       <Head />
-      <CopySection />
+      <CopySections />
     </>
   );
 };

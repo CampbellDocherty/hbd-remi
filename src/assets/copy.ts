@@ -1,4 +1,10 @@
-export const copy = [
+export type Copy = {
+  title: string;
+  children: string[];
+  media: string[];
+};
+
+export const copy: Copy[] = [
   {
     title: '(2) Day trip to Samothraki',
     children: [
@@ -15,17 +21,26 @@ export const copy = [
   },
   {
     title: 'Bulgarian boat trip',
-    children: [],
+    children: [
+      'Mouses meal paid for by Uncle Stathis - Remi almost chokes on bread (Near death count: 1)',
+      'Drunk driving courtesy of yours truly (Near death count: 2)',
+      'Swimming to the boat (Near death count: 3)',
+      'Whisky with the Bulgarians, lovely guys',
+      'Swimming back from the boat (Near death count: 4)',
+      'Drunk drive back to the house (Near death count: 5)',
+    ],
     media: [],
   },
   {
     title: 'Late night long exposure photos',
-    children: [],
+    children: [
+      "Waiting and waiting I don't remember what music we listened to",
+    ],
     media: [],
   },
   {
     title: 'Views of Thessaloniki',
-    children: [],
+    children: ['Tsipouro with Xristos', 'Up on to hook up hill for views'],
     media: [],
   },
 ];

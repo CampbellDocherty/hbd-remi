@@ -1,5 +1,10 @@
 import { styled } from 'styled-components';
-import { copy } from '../../assets/copy';
+import { Copy, copy } from '../../assets/copy';
+import { useState } from 'react';
+
+const Section = styled.section`
+  margin-left: 16px;
+`;
 
 const ElementContainer = styled.ul`
   display: flex;
@@ -25,37 +30,55 @@ const Element = styled.div`
 
 const Title = styled.p`
   margin-bottom: 8px;
+  cursor: pointer;
+  &:hover {
+    text-decoration: underline;
+  }
 `;
 
-export const CopySection = () => (
-  <>
-    {copy.map(({ title, children, media }) => (
-      <section key={title}>
-        <Title>
-          <span>&gt;</span> {title}
-        </Title>
-        {children.map((child) => (
-          <ElementContainer key={child}>
+const Content = ({ copy }: { copy: Copy }) => {
+  const [isOpen, setIsOpen] = useState(false);
+  const { title, media, children } = copy;
+  return (
+    <Section key={title}>
+      <Title onClick={() => setIsOpen(!isOpen)}>
+        <span>&gt;</span> {title}
+      </Title>
+      {isOpen && (
+        <>
+          {children.map((child) => (
+            <ElementContainer key={child}>
+              <Joiner>
+                <span style={{ marginBottom: '3px' }}>│</span>
+                <span>├</span>
+              </Joiner>
+              <Element>
+                <span>{child}</span>
+              </Element>
+            </ElementContainer>
+          ))}
+
+          <ElementContainer>
             <Joiner>
               <span style={{ marginBottom: '3px' }}>│</span>
-              <span>├</span>
+              <span>└</span>
             </Joiner>
             <Element>
-              <span>{child}</span>
+              <span>Media ({media.length})</span>
             </Element>
           </ElementContainer>
-        ))}
+        </>
+      )}
+    </Section>
+  );
+};
 
-        <ElementContainer>
-          <Joiner>
-            <span style={{ marginBottom: '3px' }}>│</span>
-            <span>└</span>
-          </Joiner>
-          <Element>
-            <span>Media ({media.length})</span>
-          </Element>
-        </ElementContainer>
-      </section>
-    ))}
-  </>
-);
+export const CopySections = () => {
+  return (
+    <>
+      {copy.map((copy) => (
+        <Content key={copy.title} copy={copy} />
+      ))}
+    </>
+  );
+};
