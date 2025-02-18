@@ -96,7 +96,7 @@ const MediaSection = ({
         <span>{i === media.length - 1 ? '└' : '├'}</span>
       </Joiner>
       <MediaElement onClick={onClick}>
-        <span>{song.src.split('/')[3].replaceAll('%20', ' ')}</span>
+        <span>{song.src.split('/').slice(-1)[0].replaceAll('%20', ' ')}</span>
 
         <Icon src={isPlaying ? pause : play} alt="play button" />
       </MediaElement>
