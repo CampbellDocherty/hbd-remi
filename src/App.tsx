@@ -1,5 +1,13 @@
+import { CopySections } from './components/CopySection';
+import { Head } from './components/Head';
+
 const App = () => {
-  return <p>Frontend fork by Cammy!</p>;
+  return (
+    <>
+      <Head />
+      <CopySections />
+    </>
+  );
 };
 
 export default App;
