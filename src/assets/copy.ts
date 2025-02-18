@@ -1,3 +1,16 @@
+import cassie from './Me & U - Cassie.mp3';
+
+import overboard from './Overboard - Miles from Kinshasa.mp3';
+import blinding from './Blinding Lights - The Weeknd.mp3';
+import wepaid from './We Paid (feat. 42 Dugg) - Lil Baby.mp3';
+import either from './either on or off the drugs - JPEGMAFIA.mp3';
+import reallove from './REAL LOVE with Fashionspitta - MIKE.mp3';
+import forgot from './FORGOT ABOUT U - Cakedog.mp3';
+import dk from './dk001 - Tlim Shug.mp3';
+import burn from './Burn-A-Hoe - Cakedog.mp3';
+import gimme from './Gimme - 1 9 0 5.mp3';
+import ifu from './If U Let Me - dj blackpower.mp3';
+
 type Media = {
   src: string;
 };
@@ -21,7 +34,7 @@ export const copy: Copy[] = [
       'HONEY GOAT',
       'Indescribably beautiful journey home',
     ],
-    media: [{ src: 'src/assets/Me & U - Cassie.mp3' }],
+    media: [{ src: cassie }],
   },
   {
     title: 'Glifoneri beach day',
@@ -32,7 +45,7 @@ export const copy: Copy[] = [
     ],
     media: [
       {
-        src: 'src/assets/Overboard - Miles from Kinshasa.mp3',
+        src: overboard,
       },
     ],
   },
@@ -48,10 +61,10 @@ export const copy: Copy[] = [
     ],
     media: [
       {
-        src: 'src/assets/Blinding Lights - The Weeknd.mp3',
+        src: blinding,
       },
       {
-        src: 'src/assets/We Paid (feat. 42 Dugg) - Lil Baby.mp3',
+        src: wepaid,
       },
     ],
   },
@@ -71,13 +84,13 @@ export const copy: Copy[] = [
     title: 'Additional media as birthday recommendations',
     children: [],
     media: [
-      { src: 'src/assets/either on or off the drugs - JPEGMAFIA.mp3' },
-      { src: 'src/assets/REAL LOVE with Fashionspitta - MIKE.mp3' },
-      { src: 'src/assets/FORGOT ABOUT U - Cakedog.mp3' },
-      { src: 'src/assets/dk001 - Tlim Shug.mp3' },
-      { src: 'src/assets/Burn-A-Hoe - Cakedog.mp3' },
-      { src: 'src/assets/Gimme - 1 9 0 5.mp3' },
-      { src: 'src/assets/If U Let Me - dj blackpower.mp3' },
+      { src: either },
+      { src: reallove },
+      { src: forgot },
+      { src: dk },
+      { src: burn },
+      { src: gimme },
+      { src: ifu },
     ],
   },
 ];
