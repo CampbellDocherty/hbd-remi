@@ -21,7 +21,7 @@ export const copy: Copy[] = [
       'HONEY GOAT',
       'Indescribably beautiful journey home',
     ],
-    media: [],
+    media: [{ src: 'src/assets/Me & U - Cassie.mp3' }],
   },
   {
     title: 'Glifoneri beach day',
@@ -66,5 +66,18 @@ export const copy: Copy[] = [
     title: 'Views of Thessaloniki',
     children: ['Tsipouro with Xristos', 'Up on to hook up hill for views'],
     media: [],
+  },
+  {
+    title: 'Additional media as birthday recommendations',
+    children: [],
+    media: [
+      { src: 'src/assets/either on or off the drugs - JPEGMAFIA.mp3' },
+      { src: 'src/assets/REAL LOVE with Fashionspitta - MIKE.mp3' },
+      { src: 'src/assets/FORGOT ABOUT U - Cakedog.mp3' },
+      { src: 'src/assets/dk001 - Tlim Shug.mp3' },
+      { src: 'src/assets/Burn-A-Hoe - Cakedog.mp3' },
+      { src: 'src/assets/Gimme - 1 9 0 5.mp3' },
+      { src: 'src/assets/If U Let Me - dj blackpower.mp3' },
+    ],
   },
 ];
