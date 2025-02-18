@@ -1,3 +1,18 @@
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
+
+body {
+  margin: 16px;
+}
+
+@font-face {
+  font-family: 'mono';
+  src: local('mono'), url('./assets/mono.ttf');
+}
+
+h4,
+p,
+span {
+  font-family: 'mono';
+}
