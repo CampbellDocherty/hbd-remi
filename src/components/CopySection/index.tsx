@@ -1,6 +1,8 @@
 import { styled } from 'styled-components';
 import { Copy, copy } from '../../assets/copy';
 import { useEffect, useRef, useState } from 'react';
+import play from '../../assets/play.svg';
+import pause from '../../assets/pause.svg';
 
 const Section = styled.section`
   margin-left: 16px;
@@ -96,10 +98,7 @@ const MediaSection = ({
       <MediaElement onClick={onClick}>
         <span>{song.src.split('/')[3].replaceAll('%20', ' ')}</span>
 
-        <Icon
-          src={isPlaying ? 'src/assets/pause.svg' : 'src/assets/play.svg'}
-          alt="play button"
-        />
+        <Icon src={isPlaying ? pause : play} alt="play button" />
       </MediaElement>
     </ElementContainer>
   );
