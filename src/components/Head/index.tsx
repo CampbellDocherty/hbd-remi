@@ -5,11 +5,13 @@ const Header = styled.header`
   flex-direction: column;
   justify-content: center;
   align-items: left;
+  margin-bottom: 32px;
 `;
 
 const Title = styled.h4`
   margin: 0;
   margin-bottom: 4px;
+  font-size: 20px;
 `;
 
 const Subtitle = styled.p`

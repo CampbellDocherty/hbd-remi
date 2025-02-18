@@ -42,7 +42,7 @@ const Content = ({ copy }: { copy: Copy }) => {
   return (
     <Section key={title}>
       <Title onClick={() => setIsOpen(!isOpen)}>
-        <span>&gt;</span> {title}
+        <span>{isOpen ? '↓' : '→'}</span> {title}
       </Title>
       {isOpen && (
         <>
