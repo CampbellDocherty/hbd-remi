@@ -1,7 +1,11 @@
+type Media = {
+  src: string;
+};
+
 export type Copy = {
   title: string;
   children: string[];
-  media: string[];
+  media: Media[];
 };
 
 export const copy: Copy[] = [
@@ -20,6 +24,19 @@ export const copy: Copy[] = [
     media: [],
   },
   {
+    title: 'Glifoneri beach day',
+    children: [
+      'We went to a small beach with a resturant that did red wine Octopus',
+      'I think Fed got pissed at you for always teasing him',
+      'Played some football',
+    ],
+    media: [
+      {
+        src: 'src/assets/Overboard - Miles from Kinshasa.mp3',
+      },
+    ],
+  },
+  {
     title: 'Bulgarian boat trip',
     children: [
       'Mouses meal paid for by Uncle Stathis - Remi almost chokes on bread (Near death count: 1)',
@@ -29,7 +46,14 @@ export const copy: Copy[] = [
       'Swimming back from the boat (Near death count: 4)',
       'Drunk drive back to the house (Near death count: 5)',
     ],
-    media: [],
+    media: [
+      {
+        src: 'src/assets/Blinding Lights - The Weeknd.mp3',
+      },
+      {
+        src: 'src/assets/We Paid (feat. 42 Dugg) - Lil Baby.mp3',
+      },
+    ],
   },
   {
     title: 'Late night long exposure photos',
